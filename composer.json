@@ -1,0 +1,26 @@
+{
+    "name": "protein/route",
+    "description": "A simple and fast URL router",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefano Azzolini",
+            "email": "lastguest@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "Protein/event": "^1.0.0",
+        "Protein/filter": "^1.0.0",
+        "Protein/url": "^1.0.0",
+        "Protein/request": "^1.0.0",
+        "Protein/response": "^1.0.0",
+        "Protein/options": "^1.0.0"
+    },
+    "autoload": {
+        "PSR-4": {
+            "Protein\\": "src/"
+        }
+    }
+}
