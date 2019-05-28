@@ -7,13 +7,13 @@
 ---
 
 ```
-composer require protein/route
+composer require proteins/route
 ```
 
 Require the global class via :
 
 ```php
-use Protein\Route;
+use Proteins\Route;
 ```
 
 ### URL mapping

@@ -5,19 +5,19 @@
  *
  * URL Router and action dispatcher.
  *
- * @package Protein
+ * @package Proteins
  * @author  "Stefano Azzolini"  <lastguest@gmail.com>
  */
 
-namespace Protein;
+namespace Proteins;
 
-use Protein\Request;
-use Protein\Response;
-use Protein\URL;
-use Protein\Events;
-use Protein\Filter;
-use Protein\Module;
-use Protein\Options;
+use Proteins\Request;
+use Proteins\Response;
+use Proteins\URL;
+use Proteins\Events;
+use Proteins\Filter;
+use Proteins\Module;
+use Proteins\Options;
 
 class Route {
 
