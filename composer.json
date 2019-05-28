@@ -11,12 +11,12 @@
     ],
     "require": {
         "php": "^7.2",
-        "protein/event": "^1.0.0",
-        "protein/filter": "^1.0.0",
-        "protein/url": "^1.0.0",
-        "protein/request": "^1.0.0",
-        "protein/response": "^1.0.0",
-        "protein/options": "^1.0.0"
+        "protein/event": "^1",
+        "protein/filter": "^1",
+        "protein/url": "^1",
+        "protein/request": "^1",
+        "protein/response": "^1",
+        "protein/options": "^1"
     },
     "autoload": {
         "psr-4": {
