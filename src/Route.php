@@ -11,17 +11,9 @@
 
 namespace Proteins;
 
-use Proteins\Request;
-use Proteins\Response;
-use Proteins\URL;
-use Proteins\Events;
-use Proteins\Filter;
-use Proteins\Module;
-use Proteins\Options;
-
 class Route {
 
-    use Module,
+    use Extensions,
         Events {
           on as onEvent;
         }
