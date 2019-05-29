@@ -17,7 +17,6 @@
         "proteins/request": "^1.0.0",
         "proteins/response": "^1.0.0",
         "proteins/options": "^1.0.0",
-        "proteins/deferred": "^1.0.0",
         "proteins/extensions": "^1.0.0"
     },
     "autoload": {
