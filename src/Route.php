@@ -14,6 +14,7 @@ namespace Proteins;
 class Route {
     use Extensions,
         Filters,
+        Options,
         Events {
           on as onEvent;
         }
@@ -111,7 +112,7 @@ class Route {
      */
     public function run(array $args, $method='get'){
       $method = \strtolower($method);
-      $append_echoed_text = Options::get('core.route.append_echoed_text',true);
+      $append_echoed_text = static::option('append_echoed_text',true);
       static::trigger('start', $this, $args, $method);
 
       // Call direct befores
@@ -136,7 +137,7 @@ class Route {
                   : $this->callback;
 
       if (is_callable($callback) || \is_a($callback, "Proteins\\View") ) {
-        Response::type( Options::get('core.route.response_default_type', Response::TYPE_HTML) );
+        Response::type( static::option('response_default_type', Response::TYPE_HTML) );
 
         \ob_start();
         if (\is_a($callback, "Proteins\\View")) {
@@ -434,7 +435,7 @@ class Route {
         if ($route->tag) static::$tags[$route->tag] =& $route;
 
         // Optimize tree
-        if (Options::get('core.route.auto_optimize', true)){
+        if (static::option('auto_optimize', true)){
           $base =& static::$optimized_tree;
           foreach (\explode('/',\trim(\preg_replace('#^(.+?)\(?:.+$#','$1',$route->URLPattern),'/')) as $segment) {
             $segment = \trim($segment,'(');
@@ -477,7 +478,7 @@ class Route {
 
         // Static group
         case ( 0 === \strpos("$URI/", "$pre_prefix$prefix/") )
-             || ( ! Options::get('core.route.pruning', true) ) :
+             || ( ! static::option('pruning', true) ) :
 
           static::$prefix[] = $prefix;
           if (empty(static::$group)) static::$group = [];
